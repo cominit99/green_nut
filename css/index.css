@@ -1,0 +1,417 @@
+@charset "utf-8";
+
+*{margin:0; padding:0; box-sizing: border-box;}
+
+::-webkit-scrollbar {
+    scroll-behavior:smooth ;
+}
+
+html,body{     
+    font-weight: 300;
+    font:10.5pt/160% "Gothic A1", sans-serif;
+    color:#333;
+    letter-spacing: -0.3pt;
+    height: 3000px;
+}
+
+a {
+    text-decoration: none;
+    color:#333;
+}
+
+img { 
+    display:block;
+    max-width:100%;/* 모든 이미지는 부모 밖으로 나오지 말아라. */
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+#layout { 
+    max-width: 1920px;
+    margin:auto;    
+    overflow:hidden ;    
+}
+
+#layout h1{
+    display:none;
+}
+
+#header h2{
+    display:none;
+}
+
+/* header 영역 */
+
+#header {
+    border:0px solid red;
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top:20px;
+}
+
+#header form {
+    border:0px solid red;
+    border-bottom: 2px solid #9db97e;
+}
+
+#header form b{
+    color: #9db97e;
+    margin: 0px 10px 10px 10px;
+    display:inline-block;
+}
+
+#header form input {
+    border:none;
+    height: 20px;
+    outline: 0;
+}
+
+#header form span{
+    border:0px solid red;
+    color: #9db97e;
+    transform: translateY(5px); 
+}
+
+#header .head_menu {
+    border:0px solid blue;
+    display: inline-block;
+    margin: 0 10px 0 10px;
+}
+
+#header>div b{
+    font-style: normal;
+    font-weight: 100;
+    color:#e5e5e5;
+}
+
+#header ul {
+    border:0px solid red;    
+}
+
+#header ul {
+    list-style: none;    
+    display:inline-block;   
+    float: right;
+    text-align: right;
+    height: fit-content;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+#header div:first-child>#qna { 
+    background-color: #a45e78 !important;
+    position:relative;
+}
+
+#qna button {
+    float:right;
+    border:none;
+    background: none;
+}
+
+#qna ul{
+    background: rgba(255, 255, 255, 0.9);
+    position: absolute; 
+    height: 0px;
+    margin-top:5px;
+    transform: translateX(-65px);
+    transition: all 0.5s;
+    padding:0px 10px 0px 10px;
+}
+
+#qna ul p{
+    margin:10px;
+}
+
+#qna:hover ul {
+    height: 150px;
+    transition: all 0.5s;
+}
+
+/* sale 영역 */
+
+#sale h2{
+    padding-top:30px;
+}
+
+#sale h2 img { 
+    margin:auto;
+}
+
+#sale h3 {
+    padding-top:55px;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+#sale h3+ p {
+    text-align: center;
+    padding:20px 0 45px;
+}
+
+#sale ul {
+    list-style: none;
+    display:flex;
+    max-width: 1200px;
+    margin:auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* border:1px solid red; */
+}
+
+#sale li {
+    width:585px;
+    border:1px solid #ddd;
+    display:flex;
+    margin-bottom: 25px;    
+}
+
+#sale li> div {
+ padding:15px 20px 0 25px;
+ flex:1;/* width가 확장 되는 개념 */ /*li가 flex가 되었기 때문에 width100%조건이 사라짐 */
+}
+
+#sale .tlt {
+    text-align: right;
+    
+}
+
+#sale .tlt b {    
+    padding: 3px 7px 2px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    text-transform: capitalize;
+}
+
+#sale .new {
+    border:1px solid #adc78a;
+    color:#adc78a;
+}
+
+#sale .sale {
+    border:1px solid #e4ac7b;
+    color:#e4ac7b;
+}
+
+#sale .best {
+    border:1px solid #a45e78;
+    color:#a45e78;
+}
+
+#sale li:nth-child(2) .new, 
+#sale li:nth-child(2) .best, 
+#sale li:nth-child(3) .best,
+#sale li:nth-child(4) .new { display:none;}
+
+#sale h4 {
+    padding: 30px 0 25px;
+    font-size: 1.15rem;
+}
+
+#sale h4+ p {
+    color:#777;
+    padding-bottom: 20px;
+}
+
+#sale p+ div{
+    display: flex;
+    /* border:1px solid red;  */
+    align-items: flex-end;  
+}
+
+#sale del {
+    display:block;
+    line-height: 120%;
+}
+
+#sale strong {
+    font-size: 2.8rem;
+    color:#fc7a00;
+    padding-right: 10px;
+}
+
+#sale strong i{
+    font-size: 1.5rem;
+    font-style: normal;
+    
+}
+
+#sale ins {
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+
+#sale ins i {
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+#sale a {
+    display:block;
+    width:fit-content;
+    margin:20px auto;
+    padding:15px 50px;
+    background: none;
+    border:1px solid #888;
+    font-size: 1.2rem;
+    color:#999;
+    font-weight: 600;
+    display:flex;
+    align-items: center;
+}
+
+#sale a span {
+    font-weight: 100;   
+    font-size: 2rem;
+    color:#999;    
+    padding-right: 10px;
+}
+
+#sale ul li div:first-child {    
+    position:relative;
+    padding:inherit;
+    border:0px solid blue;    
+}
+
+#sale ul li div:first-child>div {
+    border:0px solid green;    
+    position:absolute;
+    top:0;
+    left:10%;    
+    display:inline-block;
+}
+
+#sale ul li div:first-child>div p{    
+    border:0px solid red;
+    position:absolute;
+    top:15%;
+    left:40%; 
+    font-size: 1.2rem;
+    font-weight: 800;
+    color:white;
+}
+
+#ul_2 {
+    height: 0;
+    overflow: hidden;
+    transition: all 1s;
+}
+
+#ul_2:target {
+    height: 500px;
+    transition: all 1s;
+}
+/* header 영역 */
+
+
+
+
+/* *********** */
+
+@media (max-width:1150px){
+    #sale ul {
+        justify-content: center;
+    }
+}
+
+
+@media (max-width:500px){
+
+    #sale ul li {
+        flex-direction: column;
+        padding-bottom: 0px;
+        margin-bottom: 15px;
+    }
+
+    #sale #ul_2 li {
+        flex-direction: column;
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+    }
+
+    #sale ul li:nth-child(3) h4+ p{
+        display: none;
+    }
+
+    #sale h2 img{
+        transition: all 1s;
+        transform:scale(1.8);        
+    }
+
+    #sale ul li div:first-child>img {
+        width:100%;
+    }
+
+    #sale ul li div:last-child {
+        margin-bottom: 20px;
+    }
+
+    #sale ul { padding: 0px 20px 0px 20px; }
+
+    #sale h3+ p {
+        text-align: center;
+        padding:20px 0 20px;
+    }
+
+    #sale #ul_2 {
+        height: 0px;
+        overflow: hidden;
+        transition: all 1s;
+        border:2px solid red;      
+    }  
+    
+    #sale #ul_2:target {
+        height: 2500px;
+        transition: all 1s;
+    }
+
+    #header {
+        flex-direction: column;
+        border:0px solid red;
+        padding-top:20px;
+    }
+
+    #header>a {
+        order:1;
+    }
+
+    #header>form {
+        order:2;
+    }
+    #header>div {
+        order:3;
+        margin-top:0px;
+    }
+
+    #header ul li {
+        height: 20px;
+        /* overflow:hidden; */
+    }
+
+    #qna ul{
+        background: rgba(255, 255, 255, 0.8);
+        position: absolute; 
+        height: 0px;
+        margin-top:0px;
+        transform: translateX(-90px);
+        transition: all 0.5s;
+        z-index: 1;
+        width:150px;
+    }
+
+    #qna:hover ul {
+        height: 130px;
+        transition: all 0.5s;
+    }
+}
